@@ -1,5 +1,5 @@
 import java.util.Scanner;
-////
+
 public class GameCenter implements Controller {
 	public GameCenter(String user) {
 		System.out.println(user + " Login ~\n");
@@ -28,7 +28,8 @@ public class GameCenter implements Controller {
 
 			count++;
 		}
-
+		sc.close();
+		
 		if (count == 10) {
 			System.out.println("\nYou Lose.. :(");
 		}
@@ -64,6 +65,7 @@ public class GameCenter implements Controller {
 				}
 				System.out.println("");
 			}
+			sc.close();
 			
 			if(coin == 2) {
 				System.out.println("# Game Over #");

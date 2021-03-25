@@ -1,5 +1,5 @@
 import java.util.Scanner;
-//////
+
 public class Player {
 	public static void main(String[] args) {
 		GameCenter player = new GameCenter("J's");
@@ -30,6 +30,6 @@ public class Player {
 			default:
 				System.out.println("\n@@ Invalid Input @@\n");
 			}
-		}
+		} sc.close();
 	}
 }
