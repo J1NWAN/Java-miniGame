@@ -1,5 +1,5 @@
 import java.util.Scanner;
-//
+////
 public class Player {
 	public static void main(String[] args) {
 		GameCenter player = new GameCenter("J's");

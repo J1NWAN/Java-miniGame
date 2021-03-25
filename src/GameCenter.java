@@ -1,5 +1,5 @@
 import java.util.Scanner;
-//
+////
 public class GameCenter implements Controller {
 	public GameCenter(String user) {
 		System.out.println(user + " Login ~\n");
