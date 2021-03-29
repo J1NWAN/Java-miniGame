@@ -73,4 +73,38 @@ public class GameCenter implements Controller {
 			}
 		}
 	}
+	
+	public void bulls_and_Cows() {
+		Scanner sc = new Scanner(System.in);
+		int[] computer = new int[3], user = new int[3];
+		int strike = 0, ball = 0;
+		
+		System.out.println("\n# Bulls and Cows Game #\n");
+		
+		System.out.println("Please enter a number from 1 to 9 three times.\n");
+		for(int i = 0; i < computer.length; i++) {
+			computer[i] = (int)(Math.random() * 3 + 1);
+			System.out.print((i + 1) + "> ");
+			user[i] = sc.nextInt();
+		}System.out.println(" ");
+		
+		for(int i = 0; i < computer.length; i++) {
+			for(int j = 0; j < computer.length; j++) {
+				if(computer[i] == user[j]) {
+					if(i == j) {
+						strike++;
+					} else {
+						ball++;
+					}
+				}
+			}
+		}
+		
+		if(strike == 0 && ball == 0) System.out.println("\nOUT... :(");
+		else System.out.println(strike + " STRIKE " + ball + " BALL \n");
+		
+		System.out.print("Computer Result :");
+		for(int i = 0; i < computer.length; i++) System.out.print(computer[i] + " ");
+		System.out.println("");
+	}
 }
