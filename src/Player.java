@@ -2,9 +2,11 @@ import java.util.Scanner;
 
 public class Player {
 	public static void main(String[] args) {
+		long start = System.currentTimeMillis(); // 현재 시간
+
 		GameCenter player = new GameCenter("J's");
-		int select = 0;
 		int count = 1;
+		int select = 0;
 
 		Scanner sc = new Scanner(System.in);
 
@@ -13,7 +15,7 @@ public class Player {
 			System.out.println("2. Rock Paper Scissors Game");
 			System.out.println("3. Bulls and Cows Game");
 			System.out.print("4. Exit\n\nprompt > ");
-			
+
 			select = sc.nextInt();
 			switch (select) {
 			case 1:
@@ -32,6 +34,10 @@ public class Player {
 			default:
 				System.out.println("\n@@ Invalid Input @@\n");
 			}
-		} sc.close();
+		}
+
+		sc.close();
+		long end = System.currentTimeMillis();
+		System.out.println("\nProgram Run Time : " + (end - start) / 1000.0);
 	}
 }
