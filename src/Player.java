@@ -14,7 +14,8 @@ public class Player {
 			System.out.println("\n1. Up and Down Game");
 			System.out.println("2. Rock Paper Scissors Game");
 			System.out.println("3. Bulls and Cows Game");
-			System.out.print("4. Exit\n\nprompt > ");
+			System.out.println("4. Last Word Chain Game");
+			System.out.print("0. Exit\n\nprompt > ");
 
 			select = sc.nextInt();
 			switch (select) {
@@ -28,6 +29,9 @@ public class Player {
 				player.bulls_and_Cows();
 				break;
 			case 4:
+				player.word_Chain();
+				break;
+			case 0:
 				System.out.println("\nExit\n");
 				count = 0;
 				break;
